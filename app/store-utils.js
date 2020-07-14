@@ -37,3 +37,13 @@ export function generateTapeList(obj) {
 
     return liEl;
 }
+
+export function findByID (cartItem, productsArray) {
+    let product = null;
+
+    for (let i = 0; i < productsArray.length; i++) {
+        if (cartItem === productsArray[i].id) return productsArray[i];
+    }
+
+    return product;
+}

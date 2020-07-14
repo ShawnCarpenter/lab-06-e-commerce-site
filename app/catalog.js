@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { generateTapeList } from './generateTapeList.js';
+import { generateTapeList } from './store-utils.js';
 
 import tapes from './tapes.js';
 // initialize state
