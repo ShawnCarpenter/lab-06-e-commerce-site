@@ -1,12 +1,12 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateTapeList } from '../generateTapeList.js';
+import { generateTapeList } from '../catalog/generateTapeList.js';
 const test = QUnit.test;
 
 test('time to test a function', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<li><h3>74 Jailbreak</h3><img src="assets/jailbreak-cover.jpg" alt="74 Jailbreak cover image"><p class="title">74 Jailbreak</p><p class="artist">AC/DC</p><p class="genre"></p><p>$5.99</p><button value="jailbreak">Add</button></li>';
+    const expected = '<li class="album"><h3 class="item-heading">74 Jailbreak</h3><img src="assets/jailbreak-cover.jpg" alt="74 Jailbreak cover image" class="cover-photo"><p class="artist">AC/DC</p><p class="title">74 Jailbreak</p><p class="genre">rock</p><p class="price">$5.99</p><button value="jailbreak">Add</button></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const
