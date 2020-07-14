@@ -13,3 +13,8 @@ export function calcLineItem(price, quantity) {
     const total = Math.round(rawTotal * 100) / 100;
     return total;
 }
+
+export function formatAsDollars(num) {
+    const roundedNumber = Math.round(Number(num) * 100) / 100;
+    return `$${roundedNumber}`;
+}

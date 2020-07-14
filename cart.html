@@ -19,31 +19,36 @@
     </header>
     <main>
         <table id="cart" >
-            <tr>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Cost</th>
-            </tr>
-            <tr class="items-row">
-                <td>London Calling</td>
-                <td class="currency" >$5.99</td>
-                <td>2</td>
-                <td class="currency">$11.98</td>
-            </tr>
-            <tr id="items-row">
-                <td>Back in Black</td>
-                <td class="currency" >$5.99</td>
-                <td>1</td>
-                <td class="currency">$5.99</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>Total Cost: </td>
-                <td class="currency">$11.98</td>
-
-            </tr>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr class="items-row">
+                    <td>London Calling</td>
+                    <td class="currency" >$5.99</td>
+                    <td>2</td>
+                    <td class="currency">$11.98</td>
+                </tr>
+                <tr class="items-row">
+                    <td>Back in Black</td>
+                    <td class="currency" >$5.99</td>
+                    <td>1</td>
+                    <td class="currency">$5.99</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total Cost: </td>
+                    <td class="currency">$11.98</td>
+                </tr>
+            </tfoot>
 
         </table>
     </main>
