@@ -1,10 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { findByID } from '../app/store-utils.js';
+import { findByID, calcLineItem } from '../app/store-utils.js';
 const test = QUnit.test;
-
-
-
 
 
 test('findById should accept an itemId and an array of objects. It should return the object that matches that ID or null if there are no matches', (expect) => {
@@ -98,6 +95,29 @@ test('findById should accept an itemId and an array of objects. It should return
     expect.equal(actual1, expected1);
     expect.equal(actual2, expected2);
 });
+
+test('calcLineItem should take a price and a quantity and return a total rounded to two places.', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const price = 5.99;
+    
+    const expected1 = 11.98;
+    const expected2 = 5.99;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    
+    const actual1 = calcLineItem(price, 2);
+    const actual2 = calcLineItem(price, 1);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual1, expected1);
+    expect.equal(actual2, expected2);
+});
+
+ 
+
 
  
 
