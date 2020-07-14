@@ -14,7 +14,13 @@ header {
     height: 150px;
     padding: 25px;
 }
-
+h1 {
+    font-size: 36pt;
+}
+h3 {
+    font-size: 20pt;
+    font-weight: bold;
+}
 .nav-bar li {
     display: inline-block;
     font-size: 18pt;

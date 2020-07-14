@@ -11,14 +11,6 @@ body {
     justify-content: space-evenly;    
 }
 
-h1 {
-    font-size: 36pt;
-}
-h3 {
-    font-size: 20pt;
-    font-weight: bold;
-}
-
 .album {
     border: 2px solid  var(--color5);
     width: 350px;
