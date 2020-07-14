@@ -15,7 +15,7 @@ header {
     padding: 25px;
 }
 
-.nav li {
+.nav-bar li {
     display: inline-block;
     font-size: 18pt;
     font-weight: bold;
@@ -24,7 +24,7 @@ header {
     padding: 5px;
 } 
 
-.nav li:hover {
+.nav-bar li:hover {
     font-weight: bolder;
     color: var(--color1);
     background-color: var(--color4);

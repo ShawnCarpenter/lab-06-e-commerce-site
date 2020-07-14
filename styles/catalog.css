@@ -47,8 +47,6 @@ button:hover {
     font-weight: bold;
     cursor: pointer;
     background-color: var(--color4);
-
-
 }
 
 .item-heading {
@@ -63,7 +61,7 @@ button:hover {
 }
 
 .cover-photo:hover {
-    border: 3px solid var(--color3);
+    box-shadow: 2px 2px 4px var(--color5);
 }
 .title {
     grid-area: 'title';
