@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 200px;
     padding: 25px;
 }
 h1 {
@@ -35,6 +35,11 @@ h3 {
     color: var(--color1);
     background-color: var(--color4);
     box-shadow: 3px 3px 4px var(--color5);
+}
+
+.current-nav li {
+    color: purple;
+    font-size: xx-large;
 }
 
 main {

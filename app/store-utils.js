@@ -19,6 +19,15 @@ export function formatAsDollars(num) {
     return `$${roundedNumber}`;
 }
 
+export function calcOrderTotal(cart, tapes) {
+    let total = 0;
+    cart.forEach(cartItem => {
+        const product = findByID(cartItem.id, tapes);
+        total += calcLinePrice(product.price, cartItem.quantity);
+    });
+
+    return total;
+}
 export function buildNavBar(page) {
     const pages = [
         {
@@ -37,17 +46,16 @@ export function buildNavBar(page) {
             name: 'Login',
             url: './test/index.html'
         }];
-    const navbar = document.querySelector('.nav-bar');
+    const navBar = document.querySelector('.nav-bar');
     pages.forEach(item => {
         const navAnchor = document.createElement('a');
         const navLi = document.createElement('li');
         
         navAnchor.href = item.url;
-        if (page === item.name) navAnchor.className = 'current-nav';
+        if (page === item.name) navLi.className = 'current-nav';
         navLi.textContent = item.name;
         
         navAnchor.appendChild(navLi);
-        navbar.appendChild(navAnchor);   
+        navBar.appendChild(navAnchor);   
     });    
-    // return navbar;
 }
