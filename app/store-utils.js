@@ -37,7 +37,7 @@ export function buildNavBar(page) {
         {
             name:'Catalog',
             url: 'catalog.html'
-        } , 
+        }, 
         {
             name: 'Cart',
             url: 'cart.html'
@@ -52,10 +52,11 @@ export function buildNavBar(page) {
         const navLi = document.createElement('li');
         
         navAnchor.href = item.url;
+        navAnchor.textContent = ' ';
         if (page === item.name) navLi.className = 'current-nav';
         navLi.textContent = item.name;
         
-        navAnchor.appendChild(navLi);
-        navBar.appendChild(navAnchor);   
+        navAnchor.append(navLi);
+        navBar.append(navAnchor);   
     });    
 }

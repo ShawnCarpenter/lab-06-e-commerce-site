@@ -37,14 +37,15 @@ h3 {
     box-shadow: 3px 3px 4px var(--color5);
 }
 
-.current-nav li {
-    color: purple;
-    font-size: xx-large;
-}
-
 main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.current-nav {
+    font-weight: bolder;
+    color: var(--color1);
+    background-color: var(--color4);
+    box-shadow: 4px 5px 5px var(--color1);
+}

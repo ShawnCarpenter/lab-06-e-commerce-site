@@ -1,1 +1,6 @@
 /* add home page styles here */
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
