@@ -1,9 +1,9 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateTapeList } from '../catalog/generateTapeList.js';
+import { generateTapeList } from '../app/generateTapeList.js';
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('generateTapeList should read a javascript object and return an HTML element that matches what we want on the page.', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = '<li class="album"><h3 class="item-heading">74 Jailbreak</h3><img src="assets/jailbreak-cover.jpg" alt="74 Jailbreak cover image" class="cover-photo"><p class="artist">AC/DC</p><p class="title">74 Jailbreak</p><p class="genre">rock</p><p class="price">$5.99</p><button value="jailbreak">Add</button></li>';

@@ -22,7 +22,7 @@ const londonCalling = {
     id: 'londonCalling',
     title: 'London Calling',
     artist: 'The Clash',
-    description: 'The critically aclaimed album by The Clash',
+    description: 'The critically acclaimed album by The Clash',
     coverImg: 'images/london-calling.jpg',
     genre: 'Punk',
     price: 5.99,

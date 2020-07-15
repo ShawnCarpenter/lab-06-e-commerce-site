@@ -11,10 +11,16 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 200px;
     padding: 25px;
 }
-
+h1 {
+    font-size: 36pt;
+}
+h3 {
+    font-size: 20pt;
+    font-weight: bold;
+}
 .nav-bar li {
     display: inline-block;
     font-size: 18pt;
@@ -35,4 +41,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.current-nav {
+    font-weight: bolder;
+    color: var(--color1);
+    background-color: var(--color4);
+    box-shadow: 4px 5px 5px var(--color1);
 }
