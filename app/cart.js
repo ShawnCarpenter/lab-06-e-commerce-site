@@ -34,9 +34,10 @@ function buildCart() {
 buildCart();
 
 buyButton.addEventListener('click', () => {
-    alert('Gimme money');
+    const message = JSON.stringify(cart, true, 2);
+    alert(message);
     clearCart();
-    location.reload();
+    window.location = 'index.html';
 });
 
 clearButton.addEventListener('click', () => {
