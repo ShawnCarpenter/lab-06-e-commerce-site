@@ -13,11 +13,13 @@ body {
 
 .album {
     border: 2px solid  var(--color5);
+    border-radius: 5px;
+    gap: 4px;
     width: 240px;
     padding: 10px;
     margin: 10px;
     display: grid;
-    grid-template-rows: 1fr 230px 1fr 1fr 1fr;
+    grid-template-rows: 1fr 230px 1fr 1fr 40px;
     grid-template-columns: 50% 50%;
     box-shadow: 1px 1px 2px var(--color1);
 }
@@ -29,10 +31,11 @@ body {
 
 button {
     grid-area: 'button';
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     color: var(--color2);
     background-color: var(--color5);
     font-size: 16pt;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -50,6 +53,7 @@ button:hover {
     grid-area: 'cover-photo';
     grid-column: 1/3;
     justify-self: center;
+    border-radius: 5px;
 }
 
 .cover-photo:hover {
@@ -69,4 +73,10 @@ button:hover {
 
 .price {
     grid-area: 'price';
+}
+
+.quantity {
+    color: var(--color1);
+    border: 1px solid var(--color1);
+    border-radius: 5px;
 }

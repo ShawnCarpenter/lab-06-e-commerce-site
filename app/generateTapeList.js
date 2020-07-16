@@ -10,7 +10,7 @@ export function generateTapeList(obj) {
     const artistEl = document.createElement('p');
     const genreEl = document.createElement('p');
     const priceEl = document.createElement('p');
-    const quantityEl =document.createElement('input');
+    const quantityEl = document.createElement('input');
     const buttonEl = document.createElement('button');
     
     h3El.textContent = obj.title;
@@ -36,6 +36,7 @@ export function generateTapeList(obj) {
     quantityEl.min = '1';
     quantityEl.max = '10';
     quantityEl.value = 1;
+    quantityEl.classList.add('quantity');
 
 
     buttonEl.value = obj.id;

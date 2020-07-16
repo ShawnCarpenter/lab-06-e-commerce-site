@@ -30,10 +30,4 @@ test('renderLineItem takes in a product and a quantity and returns a table row e
 });
 
  
-// <tr class="items-row">
-//                     <td>London Calling</td>
-//                     <td class="currency">$5.99</td>
-//                     <td>2</td>
-//                     <td class="currency">$11.98</td>
-//                 </tr>
 
