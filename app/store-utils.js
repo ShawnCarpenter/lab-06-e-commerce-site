@@ -1,3 +1,6 @@
+//import
+// import { tapes } from './tapes.js';
+
 export function findByID(cartItem, productsArray) {
     let product = null;
 
@@ -59,4 +62,37 @@ export function buildNavBar(page) {
         navAnchor.append(navLi);
         navBar.append(navAnchor);   
     });    
+}
+
+export function getCart() {
+    let cart = null;
+    const rawCart = localStorage.getItem('CART');
+    if (rawCart) {
+        cart = JSON.parse(rawCart);
+    } else {
+        cart = [];
+    }
+    return cart;
+}
+
+export function addToCart(cartId, addQuantity) {
+    const tempCart = getCart() || [];
+    const foundItem = findByID(cartId, tempCart);
+
+    if (foundItem) {
+        foundItem.quantity += addQuantity;
+    } else {
+        let newItem = {
+            id: cartId,
+            quantity:addQuantity
+        };
+        tempCart.push(newItem);
+    }
+
+    const CART = JSON.stringify(tempCart);
+    localStorage.setItem('CART', CART);
+}
+
+export function clearCart() {
+    localStorage.removeItem('CART');
 }

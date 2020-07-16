@@ -1,3 +1,6 @@
+//Imports
+import { addToCart } from './store-utils.js';
+
 export function generateTapeList(obj) {
     const liEl = document.createElement('li');
 
@@ -30,6 +33,10 @@ export function generateTapeList(obj) {
 
     buttonEl.value = obj.id;
     buttonEl.textContent = 'Add';
+    //event listener for add button
+    buttonEl.addEventListener('click', () => {
+        addToCart(obj.id, 1);
+    });
 
     liEl.classList.add('album');
     liEl.append(h3El, imageEl, artistEl, titleEl, genreEl, priceEl, buttonEl);
