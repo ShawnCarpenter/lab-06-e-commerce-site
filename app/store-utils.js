@@ -55,12 +55,12 @@ export function buildNavBar(page) {
         const navLi = document.createElement('li');
         
         navAnchor.href = item.url;
-        navAnchor.textContent = ' ';
-        if (page === item.name) navLi.className = 'current-nav';
+        // navAnchor.textContent = ' ';
+        if (page === item.name) navLi.classList.add('current-nav') ;
         navLi.textContent = item.name;
         
-        navAnchor.append(navLi);
-        navBar.append(navAnchor);   
+        navAnchor.appendChild(navLi);
+        navBar.appendChild(navAnchor);   
     });    
 }
 
