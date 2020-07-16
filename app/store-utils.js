@@ -46,7 +46,11 @@ export function buildNavBar(page) {
             url: 'cart.html'
         },
         {
-            name: 'Login',
+            name: 'Admin',
+            url: 'admin.html'
+        },
+        {
+            name: 'test',
             url: './test/index.html'
         }];
     const navBar = document.querySelector('.nav-bar');
@@ -55,7 +59,7 @@ export function buildNavBar(page) {
         const navLi = document.createElement('li');
         
         navAnchor.href = item.url;
-        // navAnchor.textContent = ' ';
+        navAnchor.textContent = ' ';
         if (page === item.name) navLi.classList.add('current-nav') ;
         navLi.textContent = item.name;
         

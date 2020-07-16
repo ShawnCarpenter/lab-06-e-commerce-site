@@ -1,6 +1,5 @@
 //import data and scripts
 import tapes from './tapes.js';
-
 import { renderLineItem } from './render-line-item.js';
 import { findByID, calcLinePrice, formatAsDollars, buildNavBar, getCart, clearCart } from './store-utils.js';
 
