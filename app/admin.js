@@ -1,27 +1,33 @@
 //import functions
-import { buildNavBar } from '../app/store-utils.js';
+import { buildNavBar, getTapes } from '../app/store-utils.js';
+// import tapes from './tapes.js';
 buildNavBar('Admin');
 
 //get DOM elements
 const adminForm = document.getElementById('admin');
 
+// initialize state
+const tapes = getTapes();
+
 //add event listeners and process data
 
 adminForm.addEventListener('submit', e => {
     e.preventDefault();
-    const formData = new FormData(adminForm);
+    const data = new FormData(adminForm);
 
     const newTape = {
-        id: formData.get('id'),
-        title: formData.get('title'),
-        artist: formData.get('artist'),
-        description: formData.get('description'),
-        coverImg: formData.get('cover-img'),
-        genre: formData.get('genre'),
-        price: Number(formData.get('price')).toFixed(2),
+        id: data.get('id'),
+        title: data.get('title'),
+        artist: data.get('artist'),
+        description: data.get('description'),
+        coverImg: data.get('cover-img'),
+        genre: data.get('genre'),
+        price: Number(data.get('price')).toFixed(2),
     
     };
-   console.table(newTape); 
+    tapes.push(newTape);
+    const stringifiedTapes = JSON.stringify(tapes);
+    localStorage.setItem('TAPES', stringifiedTapes);
 });
 
 

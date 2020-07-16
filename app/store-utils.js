@@ -1,5 +1,5 @@
-//import
-// import { tapes } from './tapes.js';
+//import initial cart data for seedProducts function
+import tapes from './tapes.js';
 
 export function findByID(cartItem, productsArray) {
     let product = null;
@@ -99,4 +99,19 @@ export function addToCart(cartId, addQuantity) {
 
 export function clearCart() {
     localStorage.removeItem('CART');
+}
+
+export function getTapes() {
+    const rawTapes = localStorage.getItem('TAPES');
+    
+    if (rawTapes) { //we found them in local storage stringify and return
+        const newTapes = JSON.parse(rawTapes);    
+        return newTapes;
+    }
+
+    //we didn't find them in local storage so we are going to use thew imported file.
+    const stringifiedTapes = JSON.stringify(tapes);
+    localStorage.setItem('TAPES', stringifiedTapes);
+    
+    return tapes;
 }
