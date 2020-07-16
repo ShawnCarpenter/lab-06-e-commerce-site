@@ -13,3 +13,7 @@ body {
 label {
     display: block;
 }
+
+form {
+    display: grid;
+}

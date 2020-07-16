@@ -1,20 +1,20 @@
 //import data and scripts
-import tapes from './tapes.js';
 import { renderLineItem } from './render-line-item.js';
-import { findByID, calcLinePrice, formatAsDollars, buildNavBar, getCart, clearCart } from './store-utils.js';
+import { findByID, calcLinePrice, formatAsDollars, buildNavBar, getCart, clearCart, getTapes } from './store-utils.js';
 
-const cart = getCart();
+
 // Get DOM elements
-
 const cartTable = document.querySelector('#table-body');
 const totalCell = document.querySelector('.total-box');
 const buyButton = document.querySelector('#buy-button');
 const clearButton = document.querySelector('#clear-button');
 
 //initialize state
-
 let grandTotal = 0;
 buyButton.disabled = true;
+const cart = getCart();
+const tapes = getTapes();
+
 //the magic happens here.
 
 buildNavBar('Cart');
