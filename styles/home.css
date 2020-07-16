@@ -1,6 +1,20 @@
 /* add home page styles here */
+body {
+    background-image: url('../images/1024px-Compactcassette.jpg');
+    background-size: cover;
+}
 main {
     width: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    /* background-color: var(--color3); */
+    border: 3px solid var(--color3);
+    padding: 15px;
+    font-size: large;
+    font-weight: bold;
+    background-color: var(--color3);
 }

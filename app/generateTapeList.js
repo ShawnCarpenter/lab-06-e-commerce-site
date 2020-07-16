@@ -1,3 +1,6 @@
+//Imports
+import { addToCart } from './store-utils.js';
+
 export function generateTapeList(obj) {
     const liEl = document.createElement('li');
 
@@ -7,6 +10,7 @@ export function generateTapeList(obj) {
     const artistEl = document.createElement('p');
     const genreEl = document.createElement('p');
     const priceEl = document.createElement('p');
+    const quantityEl = document.createElement('input');
     const buttonEl = document.createElement('button');
     
     h3El.textContent = obj.title;
@@ -28,11 +32,23 @@ export function generateTapeList(obj) {
     priceEl.textContent = `$${Number(obj.price).toFixed(2)}`;   
     priceEl.classList.add('price');
 
+    quantityEl.type = 'number';
+    quantityEl.min = '1';
+    quantityEl.max = '10';
+    quantityEl.value = 1;
+    quantityEl.classList.add('quantity');
+
+
     buttonEl.value = obj.id;
     buttonEl.textContent = 'Add';
+    //event listener for add button
+    buttonEl.addEventListener('click', () => {
+        const quantity = Number(quantityEl.value);
+        addToCart(obj.id, quantity);
+    });
 
     liEl.classList.add('album');
-    liEl.append(h3El, imageEl, artistEl, titleEl, genreEl, priceEl, buttonEl);
+    liEl.append(h3El, imageEl, artistEl, titleEl, genreEl, priceEl, quantityEl, buttonEl);
     
 
     return liEl;
