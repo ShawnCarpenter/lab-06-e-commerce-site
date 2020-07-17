@@ -24,13 +24,6 @@ h3 {
     font-weight: bold;
 }
 
-input {
-    color: var(--color5);
-    border: 1px solid var(--color1);
-    font-weight: bold;
-    border-radius: 5px;
-}
-
 button {
     color: var(--color3);
     background-color: var(--color5);

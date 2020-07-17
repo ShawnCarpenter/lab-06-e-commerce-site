@@ -50,6 +50,3 @@ clearButton.addEventListener('click', () => {
 });
 
 totalCell.textContent = formatAsDollars(grandTotal);
-
-
-

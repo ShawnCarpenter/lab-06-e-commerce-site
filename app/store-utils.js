@@ -1,4 +1,5 @@
-//import initial cart data for seedProducts function
+//import initial inventory data.
+
 import tapes from './tapes.js';
 
 export function findByID(cartItem, productsArray) {
