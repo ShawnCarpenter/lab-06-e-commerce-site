@@ -88,9 +88,8 @@ export function addToCart(cartId, addQuantity) {
         };
         tempCart.push(newItem);
     }
-
-    const CART = JSON.stringify(tempCart);
-    localStorage.setItem('CART', CART);
+    
+    saveData('CART', tempCart);
 }
 
 export function clearCart() {
@@ -100,12 +99,11 @@ export function clearCart() {
 export function getTapes() {
     const rawTapes = localStorage.getItem('TAPES');
     
-    if (rawTapes) { //we found them in local storage stringify and return
+    if (rawTapes) { 
         const newTapes = JSON.parse(rawTapes);    
         return newTapes;
     }
 
-    //we didn't find them in local storage so we are going to use the imported file.
     const stringifiedTapes = JSON.stringify(tapes);
     localStorage.setItem('TAPES', stringifiedTapes);
     
