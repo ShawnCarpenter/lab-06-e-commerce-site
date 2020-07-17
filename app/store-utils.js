@@ -115,3 +115,8 @@ export function getTapes() {
     
     return tapes;
 }
+
+export function saveData(key, data) {
+    const stringifiedData = JSON.stringify(data);
+    localStorage.setItem(key, stringifiedData);
+}

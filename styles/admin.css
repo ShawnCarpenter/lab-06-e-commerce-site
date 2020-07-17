@@ -15,5 +15,9 @@ label {
 }
 
 form {
-    display: grid;
+    display: block;
+}
+
+table, tr {
+    border: 1px solid red;
 }

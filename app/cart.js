@@ -33,7 +33,12 @@ function buildCart() {
 buildCart();
 
 buyButton.addEventListener('click', () => {
-    const message = JSON.stringify(cart, true, 2);
+    let message = 'Thank you for purchasing: ';
+    cart.forEach(cartItem => {
+        const purchasedItem = findByID(cartItem.id, tapes);
+        message += `\n${cartItem.quantity} cop${cartItem.quantity > 1 ? 'ies' : 'y'} of ${purchasedItem.title}.`;
+    });
+    message += `\n Thank you for your purchase, your total is: ${grandTotal}`;
     alert(message);
     clearCart();
     window.location = 'index.html';

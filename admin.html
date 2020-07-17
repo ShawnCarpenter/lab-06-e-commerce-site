@@ -16,7 +16,10 @@
         </u>
     </header>
     <main>
-        <form id="admin">
+       <section id="add-item">
+
+       </section>
+        <form id="add-form">
             <label>
                 Tape ID:
                 <input name="id"  id="id" type="text">
@@ -47,6 +50,23 @@
             </label>
 
             <button type="submit">Add Tape</button>
+        </form>
+        <div>
+            <table id="current-products">
+                <thead>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody id="inventory">
+    
+                </tbody>
+    
+            </table>
+        </div>
+        
+
         </form>
        
     </main>
