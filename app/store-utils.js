@@ -1,4 +1,5 @@
-//import initial cart data for seedProducts function
+//import initial inventory data.
+
 import tapes from './tapes.js';
 
 export function findByID(cartItem, productsArray) {
@@ -48,10 +49,6 @@ export function buildNavBar(page) {
         {
             name: 'Admin',
             url: 'admin.html'
-        },
-        {
-            name: 'test',
-            url: './test/index.html'
         }];
     const navBar = document.querySelector('.nav-bar');
     pages.forEach(item => {
@@ -92,9 +89,8 @@ export function addToCart(cartId, addQuantity) {
         };
         tempCart.push(newItem);
     }
-
-    const CART = JSON.stringify(tempCart);
-    localStorage.setItem('CART', CART);
+    
+    saveData('CART', tempCart);
 }
 
 export function clearCart() {
@@ -104,12 +100,11 @@ export function clearCart() {
 export function getTapes() {
     const rawTapes = localStorage.getItem('TAPES');
     
-    if (rawTapes) { //we found them in local storage stringify and return
+    if (rawTapes) { 
         const newTapes = JSON.parse(rawTapes);    
         return newTapes;
     }
 
-    //we didn't find them in local storage so we are going to use the imported file.
     const stringifiedTapes = JSON.stringify(tapes);
     localStorage.setItem('TAPES', stringifiedTapes);
     

@@ -14,12 +14,11 @@ main{
     flex-direction: row;
     width: 100%;
     align-items: stretch;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 label {
     display: block;
-    margin: 10px;
-    min-width: 50%;
+    margin: 10px;;
     
 }
 
@@ -30,6 +29,7 @@ form, table {
 
 input {
     border: none;
-    border-radius: 0px;
+    display: block;
+    min-width: 75%;
     border-bottom: 2px solid var(--color1);
 }
