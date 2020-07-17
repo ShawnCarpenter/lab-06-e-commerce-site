@@ -1,5 +1,5 @@
 //import functions
-import { buildNavBar, getTapes, formatAsDollars, saveData } from '../app/store-utils.js';
+import { buildNavBar, getTapes, formatAsDollars, saveData, removeInventoryItem } from '../app/store-utils.js';
 
 //get DOM elements
 const adminForm = document.getElementById('add-form');
@@ -27,6 +27,7 @@ adminForm.addEventListener('submit', e => {
     };
     tapes.push(newTape);
     saveData('TAPES', tapes);
+    location.reload();
 });
 
 function createProductsTable() {
@@ -46,6 +47,7 @@ function createProductsTable() {
         buttonEl.textContent = 'Remove';
         buttonEl.addEventListener('click', () => {
             removeInventoryItem(tape.id, tapes);
+            location.reload();
         });
         removeEl.append(buttonEl);
         
@@ -55,11 +57,5 @@ function createProductsTable() {
 }
 
 
-function removeInventoryItem(id) {
-    for (let i = 0; i < tapes.length; i++) {
-        if (tapes[i].id === id) tapes.splice(i, 1);
-    }
-    saveData('TAPES', tapes);
-}
 
 

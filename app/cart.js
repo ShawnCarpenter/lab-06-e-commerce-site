@@ -38,7 +38,7 @@ buyButton.addEventListener('click', () => {
         const purchasedItem = findByID(cartItem.id, tapes);
         message += `\n${cartItem.quantity} cop${cartItem.quantity > 1 ? 'ies' : 'y'} of ${purchasedItem.title}.`;
     });
-    message += `\n Thank you for your purchase, your total is: ${grandTotal}`;
+    message += `\n Your total is: ${formatAsDollars(grandTotal)}`;
     alert(message);
     clearCart();
     window.location = 'index.html';

@@ -30,10 +30,6 @@ body {
     box-shadow: 3px 3px 3px var(--color5);
 }
 
-button {
-    grid-area: 'button';
-    grid-column: 2 / 3;
-}
 
 .item-heading {
     grid-area: 'item-heading';
@@ -50,20 +46,4 @@ button {
 
 .cover-photo:hover {
     box-shadow: 2px 2px 4px var(--color5);
-}
-
-.title {
-    grid-area: 'title';
-}
-
-.artist {
-    grid-area: 'artist';
-}
-
-.genre {
-    grid-area: 'genre';
-}
-
-.price {
-    grid-area: 'price';
 }

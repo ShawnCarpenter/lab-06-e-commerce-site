@@ -18,7 +18,7 @@ export function calcLinePrice(price, quantity) {
 }
 
 export function formatAsDollars(num) {
-    const roundedNumber = Math.round(Number(num) * 100) / 100;
+    const roundedNumber = (Math.round(Number(num) * 100) / 100).toFixed(2);
     return `$${roundedNumber}`;
 }
 
@@ -59,7 +59,7 @@ export function buildNavBar(page) {
         const navLi = document.createElement('li');
         
         navAnchor.href = item.url;
-        navAnchor.textContent = ' ';
+        // navAnchor.textContent = ' ';
         if (page === item.name) navLi.classList.add('current-nav') ;
         navLi.textContent = item.name;
         
@@ -109,7 +109,7 @@ export function getTapes() {
         return newTapes;
     }
 
-    //we didn't find them in local storage so we are going to use thew imported file.
+    //we didn't find them in local storage so we are going to use the imported file.
     const stringifiedTapes = JSON.stringify(tapes);
     localStorage.setItem('TAPES', stringifiedTapes);
     
@@ -119,4 +119,11 @@ export function getTapes() {
 export function saveData(key, data) {
     const stringifiedData = JSON.stringify(data);
     localStorage.setItem(key, stringifiedData);
+}
+
+export function removeInventoryItem(id, tapeArray) {
+    for (let i = 0; i < tapeArray.length; i++) {
+        if (tapeArray[i].id === id) tapeArray.splice(i, 1);
+    }
+    saveData('TAPES', tapeArray);
 }
