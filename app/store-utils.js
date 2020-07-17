@@ -48,10 +48,6 @@ export function buildNavBar(page) {
         {
             name: 'Admin',
             url: 'admin.html'
-        },
-        {
-            name: 'test',
-            url: './test/index.html'
         }];
     const navBar = document.querySelector('.nav-bar');
     pages.forEach(item => {
