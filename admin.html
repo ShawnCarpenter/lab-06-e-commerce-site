@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Admin page</title>
+</head>
+<body>
+    <header>
+        <h1>Admin page, add tapes here.</h1>
+        <ul class="nav-bar">
+
+        </u>
+    </header>
+    <main>
+        <form id="add-form">
+            <label>
+                Tape ID:
+                <input name="id"  id="id" type="text">
+            </label>
+            <label>
+                Title:
+                <input name="title"  id="title" type="text">
+            </label>
+            <label>
+                Artist:
+                <input name="artist"  id="artist" type="text">
+            </label>
+            <label>
+                Description:
+                <input name="description"  id="description" type="text">
+            </label>
+            <label>
+                Cover Image:
+                <input name="cover-img"  id="cover-img" type="text">
+            </label>
+            <label>
+                Genre:
+                <input name="genre"  id="genre" type="text">
+            </label>
+            <label>
+                Price:
+                <input name="price"  id="price" type="number" step=".01">
+            </label>
+
+            <button type="submit">Add Tape</button>
+        </form>
+        <div>
+            <table id="current-products">
+                <thead>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody id="inventory">
+    
+                </tbody>
+    
+            </table>
+        </div>
+        
+
+        </form>
+       
+    </main>
+    <script type="module" src="app/admin.js"></script>   
+</body>
+</html>
+

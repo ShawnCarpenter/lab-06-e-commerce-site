@@ -1,5 +1,5 @@
 //Imports
-import { addToCart } from './store-utils.js';
+import { addToCart, formatAsDollars } from './store-utils.js';
 
 export function generateTapeList(obj) {
     const liEl = document.createElement('li');
@@ -29,12 +29,11 @@ export function generateTapeList(obj) {
     genreEl.textContent = obj.genre;
     genreEl.classList.add('genre');
 
-    priceEl.textContent = `$${Number(obj.price).toFixed(2)}`;   
+    priceEl.textContent = `${formatAsDollars(obj.price)}`;   
     priceEl.classList.add('price');
 
     quantityEl.type = 'number';
     quantityEl.min = '1';
-    quantityEl.max = '10';
     quantityEl.value = 1;
     quantityEl.classList.add('quantity');
 
